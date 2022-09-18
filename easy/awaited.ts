@@ -24,9 +24,9 @@
 /* _____________ Your Code Here _____________ */
 
 type MyAwaited<T extends Promise<any>> = T extends Promise<infer Wrapped>
-  ? Wrapped extends Promise<infer Wrapped2> 
-    ? MyAwaited<Wrapped> // Recursively flatten Promises
-    : Wrapped
+  ? Wrapped extends Promise<infer Wrapped2>
+  ? MyAwaited<Wrapped> // Recursively flatten Promises
+  : Wrapped
   : never;
 
 type Test = MyAwaited<Z>
