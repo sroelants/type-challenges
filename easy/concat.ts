@@ -24,7 +24,6 @@ type Concat<T extends any[], U extends any[]> =
   ? Concat<[...T, First], Rest>
   : T;
 
-
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
 
